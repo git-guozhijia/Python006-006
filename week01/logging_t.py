@@ -21,7 +21,7 @@ def log(fileName):
         ch = logging.StreamHandler()
 
         formatter = logging.Formatter(
-            fmt='%(asctime)s-%(pathname)s-%(filename)s-[%(lineno)d]-%(levelname)s-%(message)s : ',
+            fmt='%(asctime)s-%(pathname)s-%(filename)s-[%(lineno)d]-%(levelname)s : %(message)s',
             datefmt='%Y/%m/%d %I:%M:%S'
             )
 
