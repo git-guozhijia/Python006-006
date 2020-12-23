@@ -1,7 +1,6 @@
-def testFunc(parameter_list):
-    a = parameter_list.title()
-    print(a)
+import time, os
 
-x = 'sadasdasd'
+now = time.strftime('%X', time.localtime())
+print(now)
 
-testFunc("dasdasdasdasda")
+print(f'{os.path.dirname(__file__)}/log.log')

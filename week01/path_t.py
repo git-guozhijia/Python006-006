@@ -1,7 +1,5 @@
-import random,os
+import os
 from pathlib import Path
-
-print(random.random())
 
 p = Path()
 print(p.absolute())

@@ -8,3 +8,8 @@ INFO:root:info massgae!
 WARNING:root:warning massage!
 ERROR:root:errpr massage!
 CRITICAL:root:critical massage!
+2020/12/23 06:03:08 /Users/qtt/Desktop/git-guozhijia/week01/logging_t.py logging_t.py 42行 INFO info
+2020/12/23 06:03:08 /Users/qtt/Desktop/git-guozhijia/week01/logging_t.py logging_t.py 43行 DEBUG debug
+2020/12/23 07:58:09 /Users/qtt/Desktop/git-guozhijia/week01/logging_t.py logging_t.py 40行 INFO info
+2020/12/23 07:58:09 /Users/qtt/Desktop/git-guozhijia/week01/logging_t.py logging_t.py 41行 DEBUG debug
+2020/12/23 07:59:35 /Users/qtt/Desktop/git-guozhijia/week01/guozhijia_week01.py guozhijia_week01.py 9行 INFO 2020-12-23 19:59:35
