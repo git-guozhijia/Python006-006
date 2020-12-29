@@ -1,3 +1,4 @@
+
 # 自定义报出异常的类
 class UserInputError(Exception):
     def __init__(self, ErrorInfo):
@@ -23,3 +24,11 @@ except ZeroDivisionError as err:
         1 / '111'
     except TypeError as err:
         print(err)
+
+# import pretty_errors
+# 1 / '111'
+
+# 文件的打开读取
+with open('client2.py', encoding='utf-8') as file:
+    print(file.readline())
+    print(file.readlines())

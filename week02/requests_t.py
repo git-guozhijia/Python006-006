@@ -7,3 +7,4 @@ url = 'https://movie.douban.com/top250'
 response = requests.get(url=url, headers=headers)
 
 print(response.text)
+print(f"接口请求返回的code码：{response.status_code}")
