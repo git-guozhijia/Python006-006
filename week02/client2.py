@@ -33,6 +33,23 @@ def client_socket():
             print(data.decode('utf-8'))
     s.close()
 
+def client_socket01():
+    s = socket.socket()
+    s.connect((HOST,PORT))
+    while True:
+        data = input('input >>>')
+        if data == 'exit':
+            break
+        s.sendall(data.encode('utf-8'))
+        data = s.recv(1024)
+        if not data:
+            break
+        else:
+            print(data.decode('utf-8'))
+    s.close()
+
+
+
 if __name__ == "__main__":
     client_socket()
 

@@ -37,6 +37,19 @@ def server_socket():
         conn.close()
     s.close()
 
+def server_socket01():
+    s = socket.socket()
+    s.bind((HOST,PORT))
+    s.listen(1)
+    while True:
+        conn, addr = s.accept()
+        data = conn.recv(1024)
+        if not data:
+            continue
+        s.sendall(data)
+        conn.close()
+    s.close()
+
 if __name__ == "__main__":
     server_socket()
 
