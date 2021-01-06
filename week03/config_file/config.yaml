@@ -1,0 +1,10 @@
+windows:
+  -
+    "192.168.50.162": "i-2ze4ztxyxi58e631qi2k"
+    "192.168.50.50": "i-2zed05vp346gt5bk6wjz"
+    "192.168.50.45": "i-2zed05vp346gt5bk6wjv"
+linux:
+  -
+    "192.168.50.163": "i-2ze5lrkjx05tzaoobrj9"
+    "192.168.50.130": "i-2zed7z6p817o712i7sfd"
+    "192.168.50.148": "i-2zed7z6p817o712i7sfb"
