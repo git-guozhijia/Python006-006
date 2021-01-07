@@ -11,28 +11,34 @@ import logging
 # logging.error('errpr massage!')
 # logging.critical('critical massage!')
 
+class log():
+    def __init__(self):
+        self.log_file_path = '/Users/qtt/Desktop/git-guozhijia/week01/log.log'
 
-def log(fileName):
-    logger = logging.getLogger("nick")
-    logger.setLevel(logging.DEBUG)
+    def mylog(self):
+        fileName = self.log_file_path
+        logger = logging.getLogger("nick")
+        logger.setLevel(logging.DEBUG)
 
-    if not logger.handlers:
-        fh = logging.FileHandler(fileName, encoding="utf-8")
-        ch = logging.StreamHandler()
+        if not logger.handlers:
+            fh = logging.FileHandler(fileName, encoding="utf-8")
+            ch = logging.StreamHandler()
 
-        formatter = logging.Formatter(
-            fmt='%(asctime)s-%(pathname)s-%(filename)s-[%(lineno)d]-%(levelname)s : %(message)s',
-            datefmt='%Y/%m/%d %I:%M:%S'
+            formatter = logging.Formatter(
+                fmt='%(asctime)s-%(pathname)s-%(filename)s-[%(lineno)d]-%(levelname)s : %(message)s',
+                datefmt='%Y/%m/%d %I:%M:%S'
             )
 
-        fh.setFormatter(formatter)
-        ch.setFormatter(formatter)
+            fh.setFormatter(formatter)
+            ch.setFormatter(formatter)
 
-        logger.addHandler(fh)
-        logger.addHandler(ch)
-    return logger
+            logger.addHandler(fh)
+            logger.addHandler(ch)
+        return logger
+
+
 
 if __name__ == "__main__":
-    myLog = log()
+    myLog = log().mylog()
     myLog.info("info")
     myLog.debug("debug")

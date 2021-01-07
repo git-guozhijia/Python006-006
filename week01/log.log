@@ -105,3 +105,44 @@ end of time--------:Thu Dec 24 13:58:53 2020
 start time---------:Thu Dec 24 13:58:53 2020
 end of time--------:Thu Dec 24 13:58:56 2020
 start time---------:Thu Dec 24 13:58:56 2020
+2021/01/07 04:03:27-/Users/qtt/Desktop/git-guozhijia/week01/logging_t.py-logging_t.py-[37]-INFO : info
+2021/01/07 04:03:27-/Users/qtt/Desktop/git-guozhijia/week01/logging_t.py-logging_t.py-[38]-DEBUG : debug
+2021/01/07 04:23:13-/Users/qtt/Desktop/git-guozhijia/week01/logging_t.py-logging_t.py-[43]-INFO : info
+2021/01/07 04:23:13-/Users/qtt/Desktop/git-guozhijia/week01/logging_t.py-logging_t.py-[44]-DEBUG : debug
+2021/01/07 04:23:44-/Users/qtt/Desktop/git-guozhijia/week03/ini_read.py-ini_read.py-[45]-DEBUG : user11name not found in login section
+2021/01/07 05:04:56-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[19]-INFO : delete from book where id>10000000
+2021/01/07 05:06:53-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[19]-INFO : delete func : delete from book where id>1107
+2021/01/07 05:08:11-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[20]-INFO : delete func : delete from book where id>1107
+2021/01/07 05:13:24-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[33]-ERROR : 执行sql ： select * from book
+2021/01/07 05:16:15-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[48]-ERROR : 执行sql ： select * from book
+2021/01/07 05:16:30-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[48]-ERROR : 执行sql ： select * from book limit 1
+2021/01/07 05:16:45-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[48]-ERROR : 执行sql ： select * from book order by id desc limit 1
+2021/01/07 05:40:47-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[68]-ERROR : insert_one_func error : (1062, "Duplicate entry '999' for key 'book.PRIMARY'")
+2021/01/07 05:41:00-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[64]-ERROR : 执行sql ： insert into book (id,name) value (%s,%s)
+2021/01/07 05:42:47-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[65]-INFO : 执行sql ： insert into book (('id', 'name')) value ((100001, 'guozhijia'))
+2021/01/07 05:43:15-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[69]-ERROR : insert_one_func error : (1062, "Duplicate entry '100001' for key 'book.PRIMARY'")
+2021/01/07 05:43:24-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[65]-INFO : 执行sql ： insert into book (('id', 'name')) value ((100002, 'guozhijia'))
+2021/01/07 05:43:53-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[69]-ERROR : insert_one_func error : (1062, "Duplicate entry '100002' for key 'book.PRIMARY'")
+2021/01/07 05:44:03-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[69]-ERROR : insert_one_func error : sequence item 0: expected str instance, int found
+2021/01/07 05:44:38-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[69]-ERROR : insert_one_func error : sequence item 0: expected str instance, int found
+2021/01/07 05:44:50-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[65]-INFO : 执行sql ： insert into book (id,name) value (100003,guozhijia)
+2021/01/07 05:45:37-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[65]-INFO : 执行sql ： insert into book (id,name) value (%s,%s)
+2021/01/07 05:46:37-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[69]-ERROR : insert_one_func error : (1062, "Duplicate entry '100004' for key 'book.PRIMARY'")
+2021/01/07 05:46:43-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[65]-INFO : 执行sql ： insert into book (id,name) value (%s,%s)
+2021/01/07 05:47:28-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[66]-ERROR : insert_one_func error : (1062, "Duplicate entry '100005' for key 'book.PRIMARY'")
+2021/01/07 05:47:36-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[66]-ERROR : insert_one_func error : sequence item 0: expected str instance, int found
+2021/01/07 05:47:53-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[62]-INFO : 执行sql ： insert into book (id,name) value (100006,guozhijia)
+2021/01/07 06:00:21-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[82]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:00:49-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[80]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:01:41-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[79]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:03:32-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[78]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:05:00-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[79]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:05:12-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[79]-ERROR : insert_one_func error : tuple index out of range
+2021/01/07 06:07:44-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[21]-INFO : delete func : delete from book where 
+2021/01/07 06:08:08-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[21]-INFO : delete func : delete from book where 
+2021/01/07 06:09:15-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[33]-INFO : delete func : delete from book
+2021/01/07 06:09:36-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[33]-INFO : delete func : delete from book
+2021/01/07 06:09:36-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[91]-ERROR : insert_one_func error : (0, '')
+2021/01/07 06:15:26-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[33]-INFO : delete func : delete from book
+2021/01/07 07:19:29-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[102]-ERROR : update error : (1054, "Unknown column 'guozhijia' in 'field list'")
+2021/01/07 07:19:42-/Users/qtt/Desktop/git-guozhijia/week03/pymysql_sql.py-pymysql_sql.py-[100]-INFO : 执行sql ： update book set `name` = 'guozhijia' where id = 10102
