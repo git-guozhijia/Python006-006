@@ -1,5 +1,4 @@
 import pymysql
-import time
 
 def delete_func():
     db = pymysql.connect(host='localhost', port=3306,
