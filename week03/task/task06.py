@@ -34,6 +34,14 @@ class RecordTabl(Base):
     money = Column(Float(), nullable=True, comment="转账金额")
     create_time = Column(DateTime(), nullable=True)
 
+# 建表和创建会话
+db_url = "mysql+pymysql://root:guozhijia123@localhost:3306/test_db?charset=utf8mb4"
+engine = create_engine(db_url, echo=False, encoding='utf-8')
+Base.metadata.create_all(engine)
+
+SessionClass = sessionmaker(bind=engine)
+session = SessionClass()
+
 def isscalar(str):
     try:
         float(str)
@@ -84,12 +92,5 @@ def deal(user_id01, user_id02, asset):
 
 
 if __name__ == '__main__':
-    db_url = "mysql+pymysql://root:guozhijia123@localhost:3306/test_db?charset=utf8mb4"
-    engine = create_engine(db_url, echo=False, encoding='utf-8')
-    Base.metadata.create_all(engine)
-
-    SessionClass = sessionmaker(bind=engine)
-    session = SessionClass()
-
     deal(user_id01=10001, user_id02=10002, asset=100)
     deal(user_id01="3827rewrw", user_id02=10002, asset=100)
