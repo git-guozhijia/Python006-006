@@ -1,0 +1,16 @@
+1. 在 Linux 环境下，安装 MySQL5.6 以上版本，修改字符集为 UTF8mb4 并验证，新建一个数据库 testdb，并为该数据库增加远程访问的用。
+将修改字符集的配置项、验证字符集的 SQL 语句作为作业内容提交
+show variables like '%chara%';
+vim /etc/my.cnf
+添加下面两个字段：
+    character_set_server=utf8
+    init_connect='SET NAMES utf8'
+重启mysql：systemctl restart mysqld
+
+将增加远程用户的 SQL 语句作为作业内容提交
+CREATE USER 'guozhijia'@'%' IDENTIFIED BY '123456';
+GRANT SELECT ON test_db.* TO 'guozhijia'@'%';
+GRANT INSERT ON test_db.* TO 'guozhijia'@'%';
+GRANT UPDATE ON test_db.* TO 'guozhijia'@'%';
+GRANT DELETE ON test_db.* TO 'guozhijia'@'%';
+mysql -hlocalhost -uguozhijia -p12345
