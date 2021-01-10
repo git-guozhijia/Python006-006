@@ -74,6 +74,7 @@ def deal(user_id01, user_id02, asset):
                 record_tabl = RecordTabl(transfer_id=user_id01, payee_id=user_id02, money=asset, create_time=time.strftime("%Y-%m-%d %H:%M:%S"))
                 session.add(record_tabl)
                 session.commit()
+                return print(f"{session.query(UserTable.name).filter(UserTable.uid == user_id01).first()[0]}给{session.query(UserTable.name).filter(UserTable.uid == user_id02).first()[0]}转账成功，转账金额为：{float(asset)}")
             except Exception as e:
                 print(f"insert 失败：{e}")
         except Exception as e:
