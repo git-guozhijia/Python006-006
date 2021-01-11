@@ -46,7 +46,7 @@ def isscalar(str):
     try:
         float(str)
     except ValueError:
-    	return False
+        return False
     else:
         return True
 
@@ -93,4 +93,5 @@ def deal(user_id01, user_id02, asset):
 
 if __name__ == '__main__':
     deal(user_id01=10001, user_id02=10002, asset=100)
+    deal(user_id01=10011, user_id02=12002, asset=100)
     deal(user_id01="3827rewrw", user_id02=10002, asset=100)
