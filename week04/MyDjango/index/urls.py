@@ -23,16 +23,16 @@ register_converter(converters.FourDigitYearConverter, 'yyyy')
 urlpatterns = [
     path('', views.index),
 
-    path('home/', views.home),
+    # path('home/', views.home),
 
-    # 使用自定义正则匹配器，匹配url
-    path("<yyyy:year>", views.year),
-    path("<myint:year>", views.year),
+    # # 使用自定义正则匹配器，匹配url
+    # path("<yyyy:year>", views.year),
+    # path("<myint:year>", views.year),
 
 
     # 直接使用正常的类型判断url
     path("<int:year>", views.year),
-    path("<int:year>/<str:name>", views.name),
+    # path("<int:year>/<str:name>", views.name),
 
     # ###正则表达式匹配url：from django.urls import re_path
     # re_path() 使用正则表达式方法去匹配正则
