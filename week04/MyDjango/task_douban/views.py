@@ -8,7 +8,7 @@ import time
 
 
 def task(request):
-    """
+
     Comments.objects.filter().delete()
     time.sleep(1)
     try:
@@ -20,14 +20,14 @@ def task(request):
         return render(request, 'index.html', locals())
     except Exception as e:
         return HttpResponse(f"task error: {e}")
-    """
-    try:
-        queryset = Comments.objects.all()
-        condsions = {"star_review__gte": 30.3}
-        values = queryset.filter(**condsions)
-        return render(request, 'index.html', locals())
-    except Exception as e:
-        return HttpResponse(f"task error: {e}")
+
+    # try:
+    #     queryset = Comments.objects.all()
+    #     condsions = {"star_review__gte": 30.3}
+    #     values = queryset.filter(**condsions)
+    #     return render(request, 'index.html', locals())
+    # except Exception as e:
+    #     return HttpResponse(f"task error: {e}")
 
 def get_url_name(tag=3):
     ERR = 0
