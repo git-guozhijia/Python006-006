@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    # 注册环境变量
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MyDjango.settings')
     try:
         from django.core.management import execute_from_command_line

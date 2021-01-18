@@ -20,6 +20,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', include('index.urls')),
+    path('', include('index.urls')),
+    path('douban/', include('Douban.urls')),
+    # path('index/', include('index.urls')),
     # path("<int:year>", views.myyear),
 ]

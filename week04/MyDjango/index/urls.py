@@ -23,6 +23,17 @@ register_converter(converters.FourDigitYearConverter, 'yyyy')
 urlpatterns = [
     path('', views.index),
 
+    # http://127.0.0.1:8000/index/orm_get
+    path('orm_get', views.orm_get),
+    # http://127.0.0.1:8000/index/orm_update/<str:name>
+    path('orm_update/<str:name>', views.orm_update),
+    # http://127.0.0.1:8000/index/orm_delete/<int:id>
+    path('orm_delete/<int:id>', views.orm_delete),
+    # http://127.0.0.1:8000/index/orm_insert
+    path('orm_insert', views.orm_insert),
+
+    path("2020.html", views.orm_get),
+	path("books", views.books),
     # path('home/', views.home),
 
     # # 使用自定义正则匹配器，匹配url
@@ -31,7 +42,7 @@ urlpatterns = [
 
 
     # 直接使用正常的类型判断url
-    path("<int:year>", views.year),
+    # path("<int:year>", views.year),
     # path("<int:year>/<str:name>", views.name),
 
     # ###正则表达式匹配url：from django.urls import re_path
@@ -41,5 +52,6 @@ urlpatterns = [
 		# ?P  表示该部分需要进行正则匹配
 			# <year>   变量名
 				# [0-9]{4}   匹配的正则表达式
+    # re_path('((?P<year>[0-9]{4})=urlyear).html', views.myyear, name="urlyear"),
     re_path('(?P<year>[0-9]{4}).html', views.myyear, name="urlyear"),
 ]
