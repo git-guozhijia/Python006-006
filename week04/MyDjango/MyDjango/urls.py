@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('index.urls')),
     path('douban/', include('Douban.urls')),
+    path('task/', include('task_douban.urls')),
     # path('index/', include('index.urls')),
     # path("<int:year>", views.myyear),
 ]
