@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from index.models import *
+from .models import *
 
 
 # Create your views here.
@@ -81,7 +81,7 @@ def orm_delete(request, **kwargs):
 
 
 def index(request):
-    return HttpResponse("Hellow Django!")
+	return HttpResponse("Hellow Django!")
 
 
 def year(request, year):

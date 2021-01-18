@@ -13,7 +13,8 @@ import logging
 
 class log():
     def __init__(self):
-        self.log_file_path = '/Users/qtt/Desktop/git-guozhijia/week01/log.log'
+        # self.log_file_path = '/Users/qtt/Desktop/git-guozhijia/week01/log.log'
+        self.log_file_path = './log.log'
 
     def mylog(self):
         fileName = self.log_file_path
