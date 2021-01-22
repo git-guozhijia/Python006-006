@@ -8,5 +8,6 @@ class Comments(models.Model):
     comments_time = models.DateTimeField(null=True)
 
     class Meta:
-        managed = False
-        db_table = 'comments'
+    	managed = False
+    	db_table = 'comments'
+

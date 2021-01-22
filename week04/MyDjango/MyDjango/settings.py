@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'index',
     "Douban",
     "task_douban",
+    "testAPP",
 ]
 
 # 中间件：是request和response对象之间的钩子
