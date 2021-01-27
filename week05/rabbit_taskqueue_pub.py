@@ -9,8 +9,13 @@ parameters = pika.ConnectionParameters(host='127.0.0.1',
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
-channel.queue_declare(queue='task-queue', durable=True)
+channel.queue_declare(queue='task-queue',
+                      durable=True)
 message = json.dumps({'task-queue': "send message to task_queue"})
-channel.basic_publish(exchange='', routing_key='task-queue', body=message,
-                      properties=pika.BasicProperties(delivery_mode=2))
+channel.basic_publish(exchange='',
+                      routing_key='task-queue',
+                      body=message,
+                      properties=pika.BasicProperties(
+                          delivery_mode=2
+                      ))
 connection.close()
