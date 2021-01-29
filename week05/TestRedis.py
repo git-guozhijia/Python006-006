@@ -6,9 +6,11 @@ config.read("config.ini")
 
 host = config.get(section="redis", option="host")
 port = config.get(section="redis", option="port")
+password = config.get(section="redis", option="password")
 
 try:
-	client = redis.Redis(host=host, port=port)
+	pool = redis.ConnectionPool(host=host,port=port,password=password)
+	client = redis.Redis(connection_pool=pool)
 except Exception as e:
 	print(f"client err: {e}")
 
@@ -126,6 +128,6 @@ print(client.zcard("guozhijia_zset"))# 查询有序集合内有多少个值
 # 哨兵：
 # 	自动故障迁移：主服务器出现故障不能工作时，会找到一个从服务器升级为一个主服务器，并通知客户端和所有的从服务器，通知从服务器的变更
 
-
+print(client.zcard("guozhijia_zset"))
 
 
