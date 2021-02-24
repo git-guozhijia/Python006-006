@@ -84,6 +84,7 @@ class Kls3(object):
         print(f"first name is {self.fname}")
         print(f"last name is {self.lname}")
 
+
 class Kls4(object):
     def __init__(self, fname, lname):
         self.fname = fname
@@ -98,6 +99,7 @@ class Kls4(object):
         print(f"first name is {self.fname}")
         print(f"last name is {self.lname}")
 
+
 """
 me = Kls2("win10", "mac")
 me.print_name()
@@ -111,22 +113,29 @@ me = Kls4.pre_name("zzh,zzs")
 me.print_name()
 """
 
+
 class Fruit(object):
     total = 0
+
     @classmethod
     def print_totle(cls):
         print(cls.total)
         print(id(Fruit.total))
         print(id(cls.total))
+
     @classmethod
     def set(cls, value):
         print(f"calling {cls.__name__} {value}.")
         cls.total = value
 
+
 class Apple(Fruit):
     pass
+
+
 class Orange(Fruit):
     pass
+
 
 Apple.set(100)
 Orange.set(200)
