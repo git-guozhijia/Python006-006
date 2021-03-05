@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="zmt@rm-8vb025i3c0c2k1y9z.mysql.zhangbei.rds.aliyuncs.com" uuid="5e25913f-9b60-47fe-acde-9c4558fce1cc">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://rm-8vb025i3c0c2k1y9z.mysql.zhangbei.rds.aliyuncs.com:3306/zmt</jdbc-url>
+    </data-source>
+  </component>
+</project>
