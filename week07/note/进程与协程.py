@@ -11,8 +11,7 @@ async def test(time):
 
 async def main(num):
     start_time = time.time()
-    tasks = [asyncio.create_task(test(1)) for proxy in range(num)]  # 注册任务列表
-    [await t for t in tasks]
+    tasks = [asyncio.create_task(test(3)) for proxy in range(num)]  # 注册任务列表
     print(len(tasks))
     print("协程结束时间：", time.time() - start_time)
 
@@ -22,7 +21,8 @@ def run(num):
 
 
 if __name__ == "__main__":
-    start_time = time.time()
+    """
+        start_time = time.time()
     p = Pool()
     # 启动多个进程，在每个进程内运行协程任务
     for i in range(4):
@@ -32,3 +32,6 @@ if __name__ == "__main__":
     p.close()
     p.join()
     print("进程结束时间：", time.time() - start_time)
+
+    """
+    run(10)
