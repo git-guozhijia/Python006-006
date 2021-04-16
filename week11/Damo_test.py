@@ -1,35 +1,20 @@
-from multiprocessing import Queue, Process
-import time
+from multiprocessing import Pool
+import os, time, random
 
 
-def write(q):
-    for i in ["a", "b", "c", "d"]:
-        q.put(i)
-        print(f"put {i} to queue")
-
-
-def read(q):
-    print(f"get {q.get()} from queue")
-    while 1:
-        print(f"get {q.get()} from queue")
-
-
-def main():
-    q = Queue()
-    pw = Process(target=write, args=(q,))
-    # pr = Process(target=read,args=(q,))
-    pw.start()
-    # time.sleep(3)
-    print(q.get())
-    print(q.get())
-    print(q.get())
-    print(q.get())
-    # print(q.get())
-    # pr.start()
-    pw.join()
-    # time.sleep(3)
-    # pr.terminate()
+def run_task(name):
+    print(f'Task {name} (pid = {os.getpid()}) (ppid = {os.getppid()}) is running...')
+    time.sleep(random.random() * 3)
+    print(f"Task {name} end.")
 
 
 if __name__ == "__main__":
-    main()
+    print(f'Current process {os.getpid()}.')
+    p = Pool(processes=3)
+    for i in range(5):
+        p.apply_async(run_task, args=(i,))
+    print("Waiting for all subprocesses done...")
+    p.close()
+    p.join()
+    print('All subprocesses done.')
+    p.terminate()
